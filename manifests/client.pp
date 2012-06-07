@@ -3,7 +3,7 @@ class bazaar::client {
     lucid,
     lenny,
     squeeze: {
-      package{["bzr", "bzrtools"]:
+      package{["bzr", "bzrtools", 'python-paramiko']:
         ensure => installed,
       }
     }
