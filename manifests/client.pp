@@ -3,12 +3,12 @@ class bazaar::client {
     lucid,
     lenny,
     squeeze: {
-      package{["bzr", "bzrtools"]:
+      package{['bzr', 'bzrtools', 'python-paramiko']:
         ensure => installed,
       }
     }
     default: {
-      notice "Unknown bzr package for $lsbdistcodename"
+      notice "Unknown bzr package for ${lsbdistcodename}"
     }
   }
 }
