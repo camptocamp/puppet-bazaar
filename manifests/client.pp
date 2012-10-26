@@ -1,6 +1,7 @@
 class bazaar::client {
-  case $lsbdistcodename {
+  case $::lsbdistcodename {
     lucid,
+    precise,
     lenny,
     squeeze: {
       package{['bzr', 'bzrtools', 'python-paramiko']:
@@ -8,7 +9,7 @@ class bazaar::client {
       }
     }
     default: {
-      notice "Unknown bzr package for ${lsbdistcodename}"
+      fail "Unknown bzr package for ${::lsbdistcodename}"
     }
   }
 }
