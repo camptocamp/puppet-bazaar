@@ -1,5 +1,5 @@
 class bazaar::client {
-  case $lsbdistcodename {
+  case $::lsbdistcodename {
     lucid,
     precise,
     lenny,
@@ -9,7 +9,7 @@ class bazaar::client {
       }
     }
     default: {
-      fail "Unknown bzr package for ${lsbdistcodename}"
+      fail "Unknown bzr package for ${::lsbdistcodename}"
     }
   }
 }
