@@ -17,13 +17,13 @@ define bazaar::repository(
   }
 
   exec {"init-repo ${name}":
-    command => $rootpack? {
-      true => "umask 0002; bzr init-repo --rich-root-pack /srv/bzr/${name}",
+    command   => $rootpack? {
+      true    => "umask 0002; bzr init-repo --rich-root-pack /srv/bzr/${name}",
       default => "umask 0002; bzr init-repo /srv/bzr/${name}",
       },
-    user    => $owner,
-    creates => "/srv/bzr/${name}/.bzr",
-    require => Package["bzr"],
+    user      => $owner,
+    creates   => "/srv/bzr/${name}/.bzr",
+    require   => Package['bzr'],
   }
 
   file {"/srv/bzr/${name}/.bzr":
