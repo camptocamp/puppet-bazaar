@@ -1,11 +1,16 @@
-define bazaar::checkout($ensure=present, $local, $remote, $update=false) {
+define bazaar::checkout(
+  $local,
+  $remote,
+  $ensure=present,
+  $update=false,
+) {
 
   case $ensure {
     'present': {
       exec {"checkout $name":
         command => "bzr co ${remote} ${local}",
-        creates => "$local",
-        require => Package["bzr"],
+        creates => $local,
+        require => Package['bzr'],
       }
       if $update {
         exec {"update $name":
