@@ -1,5 +1,5 @@
 class bazaar::server inherits bazaar::client {
-  file {"/srv/bzr":
+  file {'/srv/bzr':
     ensure => directory,
   }
 }
