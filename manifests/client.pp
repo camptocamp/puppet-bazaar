@@ -8,7 +8,7 @@ class bazaar::client {
       }
     }
     default: {
-      notice "Unknown bzr package for ${::lsbdistcodename}"
+      fail "Unknown bzr package for ${::lsbdistcodename}"
     }
   }
 }
