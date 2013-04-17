@@ -1,8 +1,10 @@
 class bazaar::client {
   case $::lsbdistcodename {
     lucid,
+    precise,
     lenny,
-    squeeze: {
+    squeeze,
+    wheezy: {
       package{['bzr', 'bzrtools', 'python-paramiko']:
         ensure => installed,
       }
