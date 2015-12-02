@@ -1,3 +1,7 @@
+## 2015-12-02 - Release 1.0.10
+
+Don't install bzrtools on lenny
+
 ## 2015-08-21 - Release 1.0.9
 
 Use docker for acceptance tests
