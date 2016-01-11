@@ -11,6 +11,11 @@ class bazaar::client {
         }
       }
     }
+    'RedHat': {
+      package{'bzr':
+        ensure => present,
+      }
+    }
     default: {
       fail "Unknown bzr package for ${::operatingsystem}"
     }
