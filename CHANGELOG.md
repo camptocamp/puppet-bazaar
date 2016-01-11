@@ -1,3 +1,7 @@
+## 2016-01-11 - Release 1.0.11
+
+Update with modulesync
+
 ## 2015-12-02 - Release 1.0.10
 
 Don't install bzrtools on lenny
