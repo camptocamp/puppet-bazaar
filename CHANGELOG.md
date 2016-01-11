@@ -1,3 +1,7 @@
+## 2016-01-11 - Release 1.1.0
+
+Add RedHat support
+
 ## 2016-01-11 - Release 1.0.11
 
 Update with modulesync
